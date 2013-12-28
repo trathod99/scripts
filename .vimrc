@@ -37,4 +37,4 @@ endif
 colorscheme solarized
 " STATUS LINE
 set laststatus=2
-set statusline=%F\ %=%y\ L:%l
+hi StatusLine ctermfg=033 ctermbg=255
