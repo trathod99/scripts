@@ -6,9 +6,9 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
-rm ~/.vimrc ~/.zshrc ~/tmux.conf 
+rm ~/.vimrc ~/.zshrc ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim 
 ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
-ln ~/scripts/tylwr.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
+ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/solarized.vim ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim
-ln ~/tmux.conf ~/tmux.conf
+ln ~/scripts/tmux.conf ~/tmux.conf
