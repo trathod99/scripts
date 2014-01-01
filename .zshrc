@@ -33,5 +33,6 @@ plugins=(rails)
 # ALIASES
 alias tx="cd ~ && ~/scripts/tmux.sh"
 alias proj="cd ~/PROJECTS/blog && ls -a -l"
+alias ftree="tree -f -I 'vendor|tmp' "
 
 source $ZSH/oh-my-zsh.sh

@@ -5,6 +5,7 @@ filetype off
 filetype plugin indent on
 syntax enable " syntax highlighting
 set number
+set hidden
 set autoread
 set showmode
 set visualbell
@@ -26,7 +27,7 @@ set ignorecase " ignore case in
 set smartcase " If there are uppercase letters, become case-sensitive.
 set hlsearch " highlight matches
 set gdefault " use the `g` flag by default.
-let mapleader = ","
+let mapleader = " "
 set nowrap
 set t_Co=256
 " THEMING
@@ -35,6 +36,22 @@ if !has('gui_running')
         let g:solarized_termcolors=&t_Co
 endif
 colorscheme solarized
+
 " STATUS LINE
 set laststatus=2
 hi StatusLine ctermfg=033 ctermbg=255
+
+" NETRW SETTINGS
+let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+
+" CTRLP SETTINGS
+let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
+
+" CUSTOM SHORTCUTS
+nnoremap <Leader>s :wq<CR>
+nnoremap <Leader>e :E<CR> # Spacebar+E opens netrw to the current file's directory
+nnoremap <Leader>x :bdelete<CR> # delete current buffer with Leader + x 
+nnoremap <Leader>q :q! 
+nnoremap <Leader>u :GundoToggle<CR>
