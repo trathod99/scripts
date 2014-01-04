@@ -1,4 +1,4 @@
-# GET OHMYZSH
+# GET OHMYZSH!
 ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE=true # prevent prompt from renaming tmux windows
 # Created by newuser for 5.0.2
@@ -28,7 +28,7 @@ ZSH_THEME="tyler"
 
 # PLUGINS
 
-plugins=(rails)
+plugins=(bundler)
 
 # ALIASES
 alias tx="cd ~ && ~/scripts/tmux.sh"

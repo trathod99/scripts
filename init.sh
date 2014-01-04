@@ -1,12 +1,26 @@
 #!/bin/bash
-sudo apt-get update && sudo apt-get install build-essential nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql git zsh
+
+# GET UPDATES AND INSTALL REQUIRED SOFTWARE
+sudo apt-get update && sudo apt-get install build-essential nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql git zsh ack-grep
+
+# CLONE MY DOTFILES INTO THE SCRIPTS DIRECTORY
 git clone git@github.com:trathod99/scripts.git ~/scripts
+
+# INSTALL OHMYZSH
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+# INSTALL PATHOGEN FOR VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+# INSTALL SOLARIZED COLOR SCHEME
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
-rm ~/.vimrc ~/.zshrc ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim 
+
+# REMOVE ANY FILES THAT NEED TO BE SYMLINKED
+rm ~/.vimrc ~/.zshrc ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+
+# CREATE NECESSARY SYMLINKS
 ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme

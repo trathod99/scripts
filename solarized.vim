@@ -1115,3 +1115,12 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 "
 " vim:foldmethod=marker:foldlevel=0
 "}}}
+
+
+" CUSTOMIZATIONS FOR MINIBUFEXPL
+hi MBENormal ctermfg=136 ctermbg=235
+hi MBEChanged ctermfg=023 ctermbg=235
+hi MBEVisibleNormal ctermfg=136 ctermbg=235
+hi MBEVisibleChanged ctermfg=023 ctermbg=235
+hi MBEVisibleActiveNormal ctermfg=255 ctermbg=136
+hi MBEVisibleActiveChanged ctermfg=255 ctermbg=023

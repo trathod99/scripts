@@ -54,4 +54,11 @@ nnoremap <Leader>s :wq<CR>
 nnoremap <Leader>e :E<CR> # Spacebar+E opens netrw to the current file's directory
 nnoremap <Leader>x :bdelete<CR> # delete current buffer with Leader + x 
 nnoremap <Leader>q :q! 
+
+" GUNDO SETTINGS
 nnoremap <Leader>u :GundoToggle<CR>
+let g:gundo_preview_height=25
+
+" MINIBUFEXPL SETTINGS
+hi MBENormal ctermbg=252
+hi MBEChanged ctermfg=122
