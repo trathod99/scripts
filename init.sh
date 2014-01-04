@@ -25,4 +25,9 @@ ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/solarized.vim ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim
-ln ~/scripts/tmux.conf ~/tmux.conf
+ln ~/scripts/.tmux.conf ~/tmux.conf
+
+# INSTALL VIM PLUGINS
+git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
+git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim # ctrlp
+git clone https://github.com/fholgado/minibufexpl.vim.git ~/.vim/bundle/minibufexpl # MiniBufferExplore 
