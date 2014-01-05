@@ -3,7 +3,7 @@ execute pathogen#infect()
 set nocompatible
 filetype off
 filetype plugin indent on
-syntax enable " syntax highlighting
+syntax enable 
 set number
 set hidden
 set autoread
@@ -27,7 +27,7 @@ set ignorecase " ignore case in
 set smartcase " If there are uppercase letters, become case-sensitive.
 set hlsearch " highlight matches
 set gdefault " use the `g` flag by default.
-let mapleader = " "
+let mapleader = " " " use SPACE as leader key
 set nowrap
 set t_Co=256
 " THEMING
@@ -51,14 +51,11 @@ let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
 
 " CUSTOM SHORTCUTS
 nnoremap <Leader>s :wq<CR>
-nnoremap <Leader>e :E<CR> # Spacebar+E opens netrw to the current file's directory
-nnoremap <Leader>x :bdelete<CR> # delete current buffer with Leader + x 
+nnoremap <Leader>e :E<CR>
+nnoremap <Leader>x :bdelete<CR> 
 nnoremap <Leader>q :q! 
 
 " GUNDO SETTINGS
 nnoremap <Leader>u :GundoToggle<CR>
 let g:gundo_preview_height=25
 
-" MINIBUFEXPL SETTINGS
-hi MBENormal ctermbg=252
-hi MBEChanged ctermfg=122
