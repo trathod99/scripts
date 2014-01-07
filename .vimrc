@@ -39,6 +39,7 @@ colorscheme solarized
 
 " STATUS LINE
 set laststatus=2
+set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=033 ctermbg=255
 
 " NETRW SETTINGS

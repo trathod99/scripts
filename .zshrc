@@ -35,5 +35,6 @@ plugins=(bundler)
 alias tx="cd ~ && ~/scripts/tmux.sh"
 alias proj="cd ~/PROJECTS/blog && ls -a -l"
 alias ftree="tree -f -I 'vendor|tmp' "
+alias txd="tmux kill-session -t RAILS"
 
 source $ZSH/oh-my-zsh.sh
