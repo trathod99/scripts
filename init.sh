@@ -15,16 +15,12 @@ curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen
 
 # INSTALL SOLARIZED COLOR SCHEME
 cd ~/.vim/bundle
-git clone git://github.com/altercation/vim-colors-solarized.git
-
-# REMOVE ANY FILES THAT NEED TO BE SYMLINKED
-rm ~/.vimrc ~/.zshrc ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+git clone https://github.com/junegunn/seoul256.vim.git
 
 # CREATE NECESSARY SYMLINKS
 ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
-ln ~/scripts/solarized.vim ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim
 ln ~/scripts/.tmux.conf ~/tmux.conf
 
 # INSTALL VIM PLUGINS
