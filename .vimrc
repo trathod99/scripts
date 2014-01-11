@@ -30,17 +30,14 @@ set gdefault " use the `g` flag by default.
 let mapleader = " " " use SPACE as leader key
 set nowrap
 set t_Co=256
+
 " THEMING
-set background=dark
-if !has('gui_running')
-        let g:solarized_termcolors=&t_Co
-endif
-colorscheme solarized
+color seoul256
 
 " STATUS LINE
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
-hi StatusLine ctermfg=033 ctermbg=255
+hi StatusLine ctermfg=031 ctermbg=255
 
 " NETRW SETTINGS
 let g:netrw_liststyle=3
