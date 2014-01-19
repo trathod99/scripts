@@ -3,6 +3,10 @@
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
 sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep
 
+# CONFIGURE GIT
+git config --global user.name "Tyler"
+git config --global user.email "tyler.visca.barca@gmail.com"
+
 # INSTALL OHMYZSH
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
