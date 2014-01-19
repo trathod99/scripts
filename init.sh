@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
-sudo apt-get update && sudo apt-get install build-essential nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql git zsh ack-grep
+sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql git zsh ack-grep
 
 # CLONE MY DOTFILES INTO THE SCRIPTS DIRECTORY
 git clone git@github.com:trathod99/scripts.git ~/scripts
@@ -27,3 +27,10 @@ ln ~/scripts/.tmux.conf ~/tmux.conf
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
 git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim # ctrlp
 git clone https://github.com/fholgado/minibufexpl.vim.git ~/.vim/bundle/minibufexpl # MiniBufferExplore 
+
+# INSTALL CHRUBY
+cd Desktop
+wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz
+tar -xzvf chruby-0.3.8.tar.gz
+cd chruby-0.3.8/
+sudo make install
