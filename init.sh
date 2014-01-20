@@ -36,6 +36,9 @@ tar -xzvf chruby-0.3.8.tar.gz
 cd chruby-0.3.8/
 sudo make install
 
+# CHANGE DEFAULT SHELL
+sudo chsh -s /bin/zsh vagrant
+
 # GENERATE AN SSH KEY
 cd ~/.ssh 
 ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
