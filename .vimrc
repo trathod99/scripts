@@ -4,7 +4,7 @@ set nocompatible
 filetype off
 filetype plugin indent on
 syntax enable 
-set number
+set relativenumber
 set hidden
 set autoread
 set showmode
