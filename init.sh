@@ -43,4 +43,4 @@ sudo chsh -s /bin/zsh vagrant
 cd ~/.ssh 
 ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
 cd ~/scripts
-git remote set-url git@github.com:trathod99/scripts/repo.git
+git remote set-url origin git@github.com:trathod99/scripts/repo.git
