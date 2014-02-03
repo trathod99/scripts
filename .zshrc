@@ -5,6 +5,8 @@ DISABLE_AUTO_TITLE=true # prevent prompt from renaming tmux windows
 export TERM="screen-256color"
 # THEME
 ZSH_THEME="tyler"
+# MISC CONFIG
+setopt AUTO_CD
 # ALIASES
 alias tx="cd ~ && ~/scripts/tmux.sh"
 alias proj="cd ~/PROJECTS/blog && ls -a -l"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
-sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep
+sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags
 
 # CONFIGURE GIT
 git config --global user.name "Tyler"
@@ -42,3 +42,5 @@ sudo chsh -s /bin/zsh vagrant
 # GENERATE AN SSH KEY
 cd ~/.ssh 
 ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
+cd ~/scripts
+git remote set-url git@github.com:trathod99/scripts/repo.git

@@ -5,6 +5,7 @@ filetype off
 filetype plugin indent on
 syntax enable 
 set relativenumber
+set number
 set hidden
 set autoread
 set showmode
@@ -39,19 +40,16 @@ set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=031 ctermbg=255
 
-" NETRW SETTINGS
-let g:netrw_liststyle=3
-let g:netrw_browse_split=4
-
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
 
 " CUSTOM SHORTCUTS
-nnoremap <Leader>s :wq<CR>
-nnoremap <Leader>e :E<CR>
-nnoremap <Leader>x :bdelete<CR> 
-nnoremap <Leader>q :q! 
+nnoremap <Leader>s :wq<CR> " save and quit
+nnoremap <Leader>x :bdelete<CR> " delete the current buffer
+nnoremap <Leader>q :q! " exit without saving 
+nnoremap <Leader>b :earlier 30s<CR> "go back 30 seconds
+nnoremap <Leader>f :later 30s<CR> " go forward 30 seconds
 
 " GUNDO SETTINGS
 nnoremap <Leader>u :GundoToggle<CR>
