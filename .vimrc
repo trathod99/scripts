@@ -38,7 +38,7 @@ color seoul256
 " STATUS LINE
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
-hi StatusLine ctermfg=031 ctermbg=255
+hi StatusLine ctermfg=73 ctermbg=255
 
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
