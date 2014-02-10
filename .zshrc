@@ -14,3 +14,4 @@ alias ftree="tree -f -I 'vendor|tmp' "
 alias txd="tmux kill-session -t RAILS"
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/chruby/chruby.sh
+chruby ruby-2.1.0
