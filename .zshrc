@@ -9,7 +9,7 @@ ZSH_THEME="tyler"
 setopt AUTO_CD
 # ALIASES
 alias tx="cd ~ && ~/scripts/tmux.sh"
-alias proj="cd ~/PROJECTS/blog && ls -a -l"
+alias proj="cd ~/PROJECTS/ && ls -a -l"
 alias ftree="tree -f -I 'vendor|tmp' "
 alias txd="tmux kill-session -t RAILS"
 source $ZSH/oh-my-zsh.sh
