@@ -6,6 +6,7 @@ sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-d
 # CONFIGURE GIT
 git config --global user.name "Tyler"
 git config --global user.email "tyler.visca.barca@gmail.com"
+git config --global core.pager 'vim -R -' # use vim as pager for git logs
 
 # INSTALL OHMYZSH
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
