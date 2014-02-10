@@ -31,6 +31,7 @@ set gdefault " use the `g` flag by default.
 let mapleader = " " " use SPACE as leader key
 set nowrap
 set t_Co=256
+set autochdir
 
 " THEMING
 color seoul256
@@ -59,3 +60,6 @@ let g:gundo_preview_height=25
 
 " BUFFERLINE SETTINGS
 let g:bufferline_echo=0
+
+" INDENTLINE SETTINGS
+let g:indentLine_color_term = 240 

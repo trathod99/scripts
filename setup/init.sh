@@ -28,7 +28,8 @@ ln ~/scripts/.gemrc ~/.gemrc
 # INSTALL VIM PLUGINS
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
 git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim # ctrlp
-git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline #bufferline
+git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline # bufferline
+git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentLine # indentLine
 
 # INSTALL CHRUBY
 cd ~  
