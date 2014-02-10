@@ -39,7 +39,9 @@ color seoul256
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=73 ctermbg=255
-
+autocmd VimEnter *
+                        \ let &statusline=' -- %l/%L --%{bufferline#refresh_status()}'
+                        \ .bufferline#get_status_string()
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
@@ -55,3 +57,5 @@ nnoremap <Leader>f :later 30s<CR> " go forward 30 seconds
 nnoremap <Leader>u :GundoToggle<CR>
 let g:gundo_preview_height=25
 
+" BUFFERLINE SETTINGS
+let g:bufferline_echo=0
