@@ -12,6 +12,8 @@ alias tx="cd ~ && ~/scripts/tmux.sh"
 alias proj="cd ~/PROJECTS/ && ls -a -l"
 alias ftree="tree -f -I 'vendor|tmp' "
 alias txd="tmux kill-session -t RAILS"
+alias bi="bundle install --path vendor/bundle"
+alias gta="git add . && git status"
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.1.0
