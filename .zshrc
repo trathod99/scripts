@@ -7,15 +7,19 @@ export TERM="screen-256color"
 ZSH_THEME="tyler"
 # MISC CONFIG
 setopt AUTO_CD
-# ALIASES
-alias tx="cd ~ && ~/scripts/tmux.sh"
-alias proj="cd ~/PROJECTS/ && ls -a -l"
-alias ftree="tree -f -I 'vendor|tmp' "
-alias txd="tmux kill-session -t RAILS"
-alias bi="bundle install --path vendor/bundle"
-alias gta="git add . && git status"
+# BASIC AUTOMATION ALIASES 
+        alias tx="cd ~ && ~/scripts/tmux.sh"
+        alias proj="cd ~/PROJECTS/ && ls -a -l"
+        alias ftree="tree -f -I 'vendor|tmp' "
+        alias txd="tmux kill-session -t RAILS"
+# RAILS ALIASES
+        alias bi="bundle install --path vendor/bundle"
+        alias rn="~/scripts/ruby/rails.sh"
+# GIT ALIASES
+        alias gta="git add . && git status"
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/chruby/chruby.sh
+source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/chruby/chruby.sh 
 chruby ruby-2.1.0
 #PLUGINS
 plugins=(zsh-syntax-highlighting)
