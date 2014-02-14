@@ -17,3 +17,6 @@ alias gta="git add . && git status"
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.1.0
+#PLUGINS
+plugins=(zsh-syntax-highlighting)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)

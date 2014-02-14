@@ -11,6 +11,9 @@ git config --global core.pager 'vim -R -' # use vim as pager for git logs
 # INSTALL OHMYZSH
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+# INSTALL ZSH PLUGINS
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+
 # INSTALL PATHOGEN FOR VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
@@ -25,6 +28,7 @@ ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
+ln ~/scripts/.pryrc ~/.pryrc
 
 # INSTALL VIM PLUGINS
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
