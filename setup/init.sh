@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
-sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake 
+sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag 
 
 # CONFIGURE GIT
 git config --global user.name "Tyler"
@@ -36,6 +36,7 @@ git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim # ctrlp
 git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline # bufferline
 git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentLine # indentLine
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter # gitgutter
+git clone https://github.com/rking/ag.vim ~/.vim/bundle/ag # ag.vim
 
 # INSTALL CHRUBY
 cd ~  

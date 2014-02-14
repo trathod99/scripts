@@ -32,6 +32,10 @@ let mapleader = " " " use SPACE as leader key
 set nowrap
 set t_Co=256
 set autochdir
+set cursorline 
+set wildmenu
+set lazyredraw
+set showmatch
 
 " THEMING
 color seoul256
@@ -46,6 +50,7 @@ autocmd VimEnter *
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " CUSTOM SHORTCUTS
 nnoremap <Leader>s :wq<CR> " save and quit
