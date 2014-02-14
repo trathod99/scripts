@@ -68,3 +68,10 @@ let g:bufferline_echo=0
 
 " INDENTLINE SETTINGS
 let g:indentLine_color_term = 240 
+
+" RAINBOW PARENTHESES SETTINGS
+let g:rainbow_active=1
+let g:rainbow_conf = {
+                        \ 'ctermfgs': ['065', '073', '174', '139'],
+                        \ 'parentheses': [['(',')'], ['\[','\]'], ['{','}']], 
+                        \}

@@ -37,6 +37,7 @@ git clone https://github.com/bling/vim-bufferline ~/.vim/bundle/vim-bufferline #
 git clone https://github.com/Yggdroot/indentLine ~/.vim/bundle/indentLine # indentLine
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter # gitgutter
 git clone https://github.com/rking/ag.vim ~/.vim/bundle/ag # ag.vim
+git clone https://github.com/luochen1990/rainbow ~/.vim/bundle/rainbow # rainbow parentheses
 
 # INSTALL CHRUBY
 cd ~  
