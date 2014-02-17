@@ -39,8 +39,6 @@ set showmatch
 
 " THEMING
 color seoul256
-
-" STATUS LINE
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=73 ctermbg=255
@@ -75,3 +73,11 @@ let g:rainbow_conf = {
                         \ 'ctermfgs': ['065', '073', '174', '139'],
                         \ 'parentheses': [['(',')'], ['\[','\]'], ['{','}']], 
                         \}
+
+" GITGUTTER SETTINGS
+hi GitGutterAdd ctermfg=073
+hi GitGutterChange ctermfg=065
+hi GitGutterDelete ctermfg=139
+
+" AG.vim SETTINGS
+nnoremap <Leader>A :Ag <cword><CR>
