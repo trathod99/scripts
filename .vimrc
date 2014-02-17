@@ -56,6 +56,7 @@ nnoremap <Leader>x :bdelete<CR> " delete the current buffer
 nnoremap <Leader>q :q! " exit without saving 
 nnoremap <Leader>b :earlier 30s<CR> "go back 30 seconds
 nnoremap <Leader>f :later 30s<CR> " go forward 30 seconds
+nnoremap <Leader>v <C-w><C-j>:bd<CR>  " close the bottom quickfix window
 
 " GUNDO SETTINGS
 nnoremap <Leader>u :GundoToggle<CR>
