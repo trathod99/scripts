@@ -9,7 +9,7 @@ ZSH_THEME="tyler"
 setopt AUTO_CD
 # BASIC AUTOMATION ALIASES 
         alias tx="cd ~ && ~/scripts/tmux.sh"
-        alias proj="cd ~/PROJECTS/ && ls -a -l"
+        alias prj="cd ~/DRIVE/ && ls -a -l"
         alias ftree="tree -f -I 'vendor|tmp' "
         alias txd="tmux kill-session -t RAILS"
 # RAILS ALIASES
@@ -17,6 +17,10 @@ setopt AUTO_CD
         alias rn="~/scripts/ruby/rails.sh"
 # GIT ALIASES
         alias gta="git add . && git status"
+# USE ALT S TO INSERT SUDO
+        insert_sudo () { zle beginning-of-line; zle -U "sudo " }
+        zle -N insert-sudo insert_sudo
+        bindkey "^[s" insert-sudo
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 

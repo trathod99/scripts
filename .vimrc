@@ -43,7 +43,7 @@ set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=73 ctermbg=255
 autocmd VimEnter *
-                        \ let &statusline=' -- %l/%L --%{bufferline#refresh_status()}'
+                        \ let &statusline=' -- %l/%L -- %{bufferline#refresh_status()}'
                         \ .bufferline#get_status_string()
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'

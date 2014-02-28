@@ -47,7 +47,7 @@ cd chruby-0.3.8/
 sudo make install
 
 # CHANGE DEFAULT SHELL
-sudo chsh -s /bin/zsh vagrant
+sudo chsh -s /bin/zsh ubuntu 
 
 # GENERATE AN SSH KEY
 cd ~/.ssh 
