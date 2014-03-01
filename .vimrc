@@ -45,6 +45,11 @@ hi StatusLine ctermfg=73 ctermbg=255
 autocmd VimEnter *
                         \ let &statusline=' -- %l/%L -- %{bufferline#refresh_status()}'
                         \ .bufferline#get_status_string()
+augroup vimrc_autocmds
+        autocmd BufEnter * highlight OverLength ctermbg=darkgrey
+        autocmd BufEnter * match OverLength /\%75v.*/
+augroup END
+
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }

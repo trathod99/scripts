@@ -21,6 +21,8 @@ setopt AUTO_CD
         insert_sudo () { zle beginning-of-line; zle -U "sudo " }
         zle -N insert-sudo insert_sudo
         bindkey "^[s" insert-sudo
+# WHENEVER ALIAS
+        alias wuc="whenever --update-crontab admin"
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 

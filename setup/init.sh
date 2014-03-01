@@ -14,6 +14,14 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 # INSTALL ZSH PLUGINS
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
+# INSTALL GITSH
+
+cd ~
+curl -O http://thoughtbot.github.io/gitsh/gitsh-0.4.tar.gz
+tar -zxf gitsh-0.4.tar.gz
+cd gitsh-0.4
+
+
 # INSTALL PATHOGEN FOR VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
@@ -29,6 +37,8 @@ ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
 ln ~/scripts/.pryrc ~/.pryrc
+mkdir ~/config
+ln ~/scripts/schedule.rb ~/config/schedule.rb
 
 # INSTALL VIM PLUGINS
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
