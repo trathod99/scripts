@@ -12,15 +12,7 @@ git config --global core.pager 'vim -R -' # use vim as pager for git logs
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # INSTALL ZSH PLUGINS
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-
-# INSTALL GITSH
-
-cd ~
-curl -O http://thoughtbot.github.io/gitsh/gitsh-0.4.tar.gz
-tar -zxf gitsh-0.4.tar.gz
-cd gitsh-0.4
-
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 # INSTALL PATHOGEN FOR VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle
@@ -34,6 +26,7 @@ git clone https://github.com/junegunn/seoul256.vim.git
 ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
+ln ~/scripts/
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
 ln ~/scripts/.pryrc ~/.pryrc
