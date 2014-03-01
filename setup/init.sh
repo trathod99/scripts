@@ -57,3 +57,8 @@ cd ~/.ssh
 ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
 cd ~/scripts
 git remote set-url origin git@github.com:trathod99/scripts.git
+
+# CHANGE MOUNT POINT OF LARGE DRIVE
+mkdir ~/DRIVE
+sudo umount /dev/xvdb
+sudo mount /dev/xvdb /home/ubuntu/DRIVE
