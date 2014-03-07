@@ -28,8 +28,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 
 chruby ruby-2.1.0
-sudo umount /dev/xvdb 
-sudo mount /dev/xvdb /home/ubuntu/DRIVE
 # ZSH HIGHLIGHT SETTINGS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=179'
