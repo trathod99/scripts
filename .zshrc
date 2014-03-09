@@ -7,6 +7,7 @@ export TERM="screen-256color"
 ZSH_THEME="tyler"
 # MISC CONFIG
 setopt AUTO_CD
+export BUNDLER_EDITOR=vim
 # BASIC AUTOMATION ALIASES 
         alias tx="cd ~ && ~/scripts/tmux.sh"
         alias ftree="tree -f -I 'vendor|tmp' "
