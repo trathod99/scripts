@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
-sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag inotify-tools
+sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag inotify-tools hg
 
 # CONFIGURE GIT
 git config --global user.name "Tyler"
@@ -58,7 +58,3 @@ ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
 cd ~/scripts
 git remote set-url origin git@github.com:trathod99/scripts.git
 
-# CHANGE MOUNT POINT OF LARGE DRIVE
-mkdir ~/DRIVE
-sudo umount /dev/xvdb
-sudo mount /dev/xvdb /home/ubuntu/DRIVE
