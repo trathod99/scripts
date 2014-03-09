@@ -10,7 +10,6 @@ setopt AUTO_CD
 export BUNDLER_EDITOR=vim
 # BASIC AUTOMATION ALIASES 
         alias tx="cd ~ && ~/scripts/tmux.sh"
-        alias ftree="tree -f -I 'vendor|tmp' "
         alias txd="tmux kill-session -t RAILS"
 # RAILS ALIASES
         alias bi="bundle install --path vendor/bundle"
@@ -21,10 +20,56 @@ export BUNDLER_EDITOR=vim
         insert_sudo () { zle beginning-of-line; zle -U "sudo " }
         zle -N insert-sudo insert_sudo
         bindkey "^[s" insert-sudo
+# FUNCTIONS
+        function capp () {
+                if [ -d ~/DRIVE/$1 ] 
+                then
+                        cd ~/DRIVE/$1
+                        CDPATH=~/DRIVE/$1
+                else
+                        echo "App not found. Create $1 ? Enter no if you don't want to"
+                        read confirm
+                        if [ ! confirm = "no" ] 
+                        then
+                                mkdir ~/DRIVE/$1
+                                cd ~/DRIVE/$1
+                                CDPATH=~/DRIVE/$1
+                        else
+                                echo "Ok. Exiting."
+                        fi
+                fi
+        }
+
+        function eapp () {
+                CDPATH=
+                cd ~
+        }
+
+        function aup () {
+                if [ -d ~/DRIVE/$1 ]
+                then
+                        sudo ln -s ~/DRIVE/$1 /var/www/$1
+                        cd /var/www/$1
+                        CDPATH=/var/www/$1
+                else
+                        echo "App not found."
+                fi
+        }
+
+        function eup () {
+                if [ -d /var/www/$1 ]
+                then
+                        sudo rm -r /var/www/$1
+                else
+                        echo "No such directory in /var/www"
+                fi
+        }
+
+        function ltree () {
+                while inotifywait -r -e create,modify,move,delete .; do tree -f -C -I 'vendor|tmp'; done
+        }
 # WHENEVER ALIAS
         alias wuc="whenever --update-crontab admin"
-# WEBAPP ALIASES
-        alias aup="cd ~ && ~/scripts/utils/aup.sh"
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 
