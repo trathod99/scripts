@@ -2,6 +2,7 @@
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
 sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag inotify-tools mercurial
+mkdir ~/.npm-packages
 
 # CONFIGURE GIT
 git config --global user.name "Tyler"
@@ -30,8 +31,10 @@ ln ~/scripts/
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
 ln ~/scripts/.pryrc ~/.pryrc
+ln ~/scripts/.npmrc ~/.npmrc
 mkdir ~/config
 ln ~/scripts/schedule.rb ~/config/schedule.rb
+wheneverize
 
 # INSTALL VIM PLUGINS
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo

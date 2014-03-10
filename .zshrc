@@ -8,9 +8,13 @@ ZSH_THEME="tyler"
 # MISC CONFIG
 setopt AUTO_CD
 export BUNDLER_EDITOR=vim
+NPM_PACKAGES='/home/ubuntu/.npm-packages'
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
 # BASIC AUTOMATION ALIASES 
         alias tx="cd ~ && ~/scripts/tmux.sh"
         alias txd="tmux kill-session -t RAILS"
+        alias v="vim"
 # RAILS ALIASES
         alias bi="bundle install --path vendor/bundle"
         alias rn="~/scripts/ruby/rails.sh"
@@ -66,13 +70,21 @@ export BUNDLER_EDITOR=vim
         }
 
         function ltree () {
-                while inotifywait -r -e create,modify,move,delete .; do tree -f -C -I 'vendor|tmp'; done
+                while inotifywait -r -e create,modify,move,delete .; do tree -a --noreport -C --dirsfirst -I 'vendor|tmp|node_modules|bower_components|\.git'; done
         }
 # WHENEVER ALIAS
         alias wuc="whenever --update-crontab admin"
+
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 
+if [ -n "$TMUX" ]; 
+then
+        echo "in tmux"
+else
+        tx
+fi
+clear
 chruby ruby-2.1.0
 # ZSH HIGHLIGHT SETTINGS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)

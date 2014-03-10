@@ -14,8 +14,8 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set history=1000
 set undolevels=100
-set tabstop=4 "4 spaces per tab character
-set softtabstop=4 " 4 spaces per soft tab
+set tabstop=2 "4 spaces per tab character
+set softtabstop=2 " 4 spaces per soft tab
 set expandtab " use soft tabs
 set smarttab
 set autoindent "match indents
