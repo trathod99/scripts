@@ -58,7 +58,7 @@ augroup END
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'ag %s --hidden -g -l --no-color ""'
 
 " CUSTOM SHORTCUTS
 nnoremap <Leader>s :wq<CR> " save and quit

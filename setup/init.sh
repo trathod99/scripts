@@ -28,7 +28,9 @@ git clone https://github.com/junegunn/seoul256.vim.git
 ln ~/scripts/.vimrc ~/.vimrc
 ln ~/scripts/.zshrc ~/.zshrc
 ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
-ln ~/scripts/
+ln ~/scripts/.agignore ~/.agignore
+ln ~/scripts/.gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
 ln ~/scripts/.dircolors ~/.dircolors
