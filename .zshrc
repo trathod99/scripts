@@ -11,7 +11,6 @@ export BUNDLER_EDITOR=vim
 NPM_PACKAGES='/home/ubuntu/.npm-packages'
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
-eval 'dircolors ~/dircolors-solarized/dircolors.256dark'
 # BASIC AUTOMATION ALIASES 
         alias szc="source ~/.zshrc"
         alias tx="cd ~ && ~/scripts/tmux.sh"
@@ -97,12 +96,12 @@ chruby ruby-2.1.0
 # ZSH HIGHLIGHT SETTINGS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=179'
-ZSH_HIGHLIGHT_STYLES[command]='fg=065'
-ZSH_HIGHLIGHT_STYLES[path]='fg=073'
+ZSH_HIGHLIGHT_STYLES[command]='fg=064'
+ZSH_HIGHLIGHT_STYLES[path]='fg=033'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=035'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=035'
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=065'
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=073'
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=064'
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=033'
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=174'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=139'
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]='bg=255'

@@ -37,7 +37,7 @@ set wildmenu
 set lazyredraw
 set showmatch
 set undofile
-set undodir=~/scripts/utils/undo
+set undodir=/tmp/undo
 set undolevels=1000
 set undoreload=10000
 set tags=tags;~
@@ -84,13 +84,13 @@ let g:indentLine_color_term = 240
 " RAINBOW PARENTHESES SETTINGS
 let g:rainbow_active=1
 let g:rainbow_conf = {
-                        \ 'ctermfgs': ['065', '073', '174', '139'],
+                        \ 'ctermfgs': ['064', '033', '174', '139'],
                         \ 'parentheses': [['(',')'], ['\[','\]'], ['{','}']], 
                         \}
 
 " GITGUTTER SETTINGS
-hi GitGutterAdd ctermfg=073
-hi GitGutterChange ctermfg=065
+hi GitGutterAdd ctermfg=033
+hi GitGutterChange ctermfg=064
 hi GitGutterDelete ctermfg=139
 
 " AG.vim SETTINGS

@@ -31,6 +31,8 @@ ln ~/scripts/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/
 ln ~/scripts/.tmux.conf ~/.tmux.conf
 ln ~/scripts/.gemrc ~/.gemrc
+ln ~/scripts/.dircolors ~/.dircolors
+ln ~/scripts/.zshenv ~/.zshenv
 ln ~/scripts/.pryrc ~/.pryrc
 ln ~/scripts/.npmrc ~/.npmrc
 mkdir ~/config
