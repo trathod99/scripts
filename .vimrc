@@ -36,6 +36,11 @@ set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
+set undofile
+set undodir=~/scripts/utils/undo
+set undolevels=1000
+set undoreload=10000
+set tags=tags;~
 
 " THEMING
 color seoul256
@@ -46,7 +51,7 @@ autocmd VimEnter *
                         \ let &statusline=' -- %l/%L -- %{bufferline#refresh_status()}'
                         \ .bufferline#get_status_string()
 augroup vimrc_autocmds
-        autocmd BufEnter * highlight OverLength ctermbg=darkgrey
+        autocmd BufEnter * highlight OverLength ctermbg=240
         autocmd BufEnter * match OverLength /\%75v.*/
 augroup END
 
@@ -63,6 +68,8 @@ nnoremap <Leader>v <C-w><C-j>:bd<CR>  " close the bottom quickfix window
 nnoremap <Leader>a :bp<CR>
 nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>b gi
+nnoremap <Leader>g <C-]>
+nnoremap <Leader>r <C-r>
 
 " GUNDO SETTINGS
 nnoremap <Leader>u :GundoToggle<CR>

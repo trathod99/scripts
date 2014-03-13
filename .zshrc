@@ -11,20 +11,27 @@ export BUNDLER_EDITOR=vim
 NPM_PACKAGES='/home/ubuntu/.npm-packages'
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
+eval 'dircolors ~/dircolors-solarized/dircolors.256dark'
 # BASIC AUTOMATION ALIASES 
+        alias szc="source ~/.zshrc"
         alias tx="cd ~ && ~/scripts/tmux.sh"
         alias txd="tmux kill-session -t RAILS"
         alias v="vim"
+        alias trees="tree -a --noreport -C --dirsfirst -I 'vendor|test|.tmp|tmp|node_modules|bower_components|\.git'"
 # RAILS ALIASES
-        alias bi="bundle install --path vendor/bundle"
-        alias rn="~/scripts/ruby/rails.sh"
+        alias Rbi="bundle install --path vendor/bundle"
+        alias Rrn="~/scripts/ruby/rails.sh"
+# ANGULAR ALIASES
+        alias Ngyp="~/scripts/node/yp.sh"
+        alias Nggrunt="grunt --force"
+        alias Ngctg="ctags -R --exclude=.tmp --exclude=node_modules"
 # GIT ALIASES
         alias gta="git add . && git status"
-# USE ALT S TO INSERT SUDO
-        insert_sudo () { zle beginning-of-line; zle -U "sudo " }
-        zle -N insert-sudo insert_sudo
-        bindkey "^[s" insert-sudo
 # FUNCTIONS
+
+        function psh () {
+                curl -s -F token="au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsTeK9mgcZvx" -F "message=:$1" https://api.pushover.net/1/messages.json
+        }
         function capp () {
                 if [ -d ~/DRIVE/$1 ] 
                 then
@@ -55,6 +62,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
                         sudo ln -s ~/DRIVE/$1 /var/www/$1
                         cd /var/www/$1
                         CDPATH=/var/www/$1
+                        sudo service apache2 start
                 else
                         echo "App not found."
                 fi
@@ -70,7 +78,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         }
 
         function ltree () {
-                while inotifywait -r -e create,modify,move,delete .; do tree -a --noreport -C --dirsfirst -I 'vendor|tmp|node_modules|bower_components|\.git'; done
+                trees && while inotifywait -r -e create,modify,move,delete . ; do trees; done;
         }
 # WHENEVER ALIAS
         alias wuc="whenever --update-crontab admin"
