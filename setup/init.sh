@@ -4,6 +4,7 @@
 sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag inotify-tools mercurial python-software-properties
 mkdir ~/DRIVE
 mkdir ~/.npm-packages
+mkdir /tmp/undo
 
 # CONFIGURE GIT
 git config --global user.name "Tyler"

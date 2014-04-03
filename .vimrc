@@ -43,7 +43,7 @@ set undoreload=10000
 set tags=tags;~
 
 " THEMING
-color seoul256
+color seoul256 
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=73 ctermbg=255

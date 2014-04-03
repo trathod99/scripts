@@ -1,54 +1,20 @@
-# GET OHMYZSH!
-ZSH=$HOME/.oh-my-zsh
-DISABLE_AUTO_TITLE=true # prevent prompt from renaming tmux windows
-# ENABLE 256 COLOR SUPPORT, INCLUDING TMUX
-export TERM="screen-256color"
-# THEME
-ZSH_THEME="tyler"
-# MISC CONFIG
-setopt AUTO_CD
-export BUNDLER_EDITOR=vim
-NPM_PACKAGES='/home/ubuntu/.npm-packages'
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-# BASIC AUTOMATION ALIASES 
-        alias szc="source ~/.zshrc"
-        alias tx="cd ~ && ~/scripts/tmux.sh"
-        alias txd="tmux kill-session -t RAILS"
-        alias v="vim"
-        alias trees="tree -a --noreport -C --dirsfirst -I 'vendor|test|.tmp|tmp|node_modules|bower_components|\.git'"
-# RAILS ALIASES
-        alias Rbi="bundle install --path vendor/bundle"
-        alias Rrn="~/scripts/ruby/rails.sh"
-# ANGULAR ALIASES
-        alias Ngyp="~/scripts/node/yp.sh"
-        alias Nggrunt="grunt --force"
-        alias Ngctg="ctags -R --exclude=.tmp --exclude=node_modules"
-# GIT ALIASES
-        alias gta="git add . && git status"
-# FUNCTIONS
-
-        function psh () {
-                curl -s -F token="au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsTeK9mgcZvx" -F "message=:$1" https://api.pushover.net/1/messages.json
-        }
-        function capp () {
-                if [ -d ~/DRIVE/$1 ] 
-                then
+capp () {
+        if [ -d ~/DRIVE/$1 ];
+        then
+                cd ~/DRIVE/$1
+                CDPATH=~/DRIVE/$1
+        else
+                echo "App not found. Create $1 ? Enter no if you don't want to"
+                read -p confirm
+                if [[ $confirm = y ]]; then
+                        mkdir ~/DRIVE/$1
                         cd ~/DRIVE/$1
                         CDPATH=~/DRIVE/$1
                 else
-                        echo "App not found. Create $1 ? Enter no if you don't want to"
-                        read confirm
-                        if [ ! confirm = "no" ] 
-                        then
-                                mkdir ~/DRIVE/$1
-                                cd ~/DRIVE/$1
-                                CDPATH=~/DRIVE/$1
-                        else
-                                echo "Ok. Exiting."
-                        fi
+                        echo "Ok. Exiting."
                 fi
-        }
+        fi
+}
 
         function eapp () {
                 CDPATH=
@@ -56,7 +22,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         }
 
         function aup () {
-                if [ -d ~/DRIVE/$1 ]
+                if [ -d ~/DRIVE/$1 ];
                 then
                         sudo ln -s ~/DRIVE/$1 /var/www/$1
                         cd /var/www/$1
@@ -68,7 +34,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         }
 
         function eup () {
-                if [ -d /var/www/$1 ]
+                if [ -d /var/www/$1 ];
                 then
                         sudo rm -r /var/www/$1
                 else
