@@ -1,4 +1,4 @@
-" Boilerplate Shit
+" Boilerplate Shiet
 execute pathogen#infect()
 set nocompatible
 filetype off
@@ -6,12 +6,16 @@ filetype plugin indent on
 syntax enable 
 set relativenumber
 set number
-set hidden
+set nohidden
 set autoread
+set autowrite
+set autowriteall
+autocmd InsertLeave * update
 set showmode
 set visualbell
 set backspace=indent,eol,start
 set encoding=utf-8
+set nohlsearch
 set history=1000
 set undolevels=100
 set tabstop=2 "4 spaces per tab character
@@ -36,8 +40,8 @@ set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
-set undofile
 set undodir=/tmp/undo
+set undofile
 set undolevels=1000
 set undoreload=10000
 set tags=tags;~
@@ -57,8 +61,11 @@ augroup END
 
 " CTRLP SETTINGS
 let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$' }
-let g:ctrlp_user_command = 'ag %s --hidden -g -l --no-color ""'
+let g:ctrlp_custom_ignore = { 'dir':'\.git$\|vendor$\|tmp$\|components$' }
+let g:ctrlp_swtich_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g_ctrlp_root_markers = '.zshrc'
+let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 
 " CUSTOM SHORTCUTS
 nnoremap <Leader>s :wq<CR> " save and quit

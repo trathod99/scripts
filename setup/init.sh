@@ -61,6 +61,7 @@ curl -s -F "token=au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsT
 
 # CHANGE DEFAULT SHELL
 sudo chsh -s /bin/zsh ubuntu 
+rm ~/.zcompdump
 
 # GENERATE AN SSH KEY
 cd ~/.ssh 
