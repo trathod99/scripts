@@ -17,14 +17,9 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         alias txd="tmux kill-session -t RAILS"
         alias v="vim"
         alias trees="tree -a --noreport -C --dirsfirst -I 'vendor|test|.tmp|tmp|components|node_modules|bower_components|\.git'"
-        alias ccat="cat \$(fzf)"
 # RAILS ALIASES
         alias Rbi="bundle install --path vendor/bundle"
         alias Rrn="~/scripts/ruby/rails.sh"
-# ANGULAR ALIASES
-        alias Ngyp="~/scripts/node/yp.sh"
-        alias Nggrunt="grunt --force"
-        alias Ngctg="ctags -R --exclude=.tmp --exclude=node_modules"
 # GIT ALIASES
         alias gta="git add . && git status"
 # FUNCTIONS
@@ -32,23 +27,15 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         function psh () {
                 curl -s -F token="au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsTeK9mgcZvx" -F "message=:$1" https://api.pushover.net/1/messages.json
         }
+
         function capp () {
                 if [ -d ~/DRIVE/$1 ] 
                 then
                         cd ~/DRIVE/$1
                         CDPATH=~/DRIVE/$1
                 else
-                        echo "App not found. Create $1 ? Enter no if you don't want to"
-                        read confirm
-                        if [ ! confirm = "no" ] 
-                        then
-                                mkdir ~/DRIVE/$1
-                                cd ~/DRIVE/$1
-                                CDPATH=~/DRIVE/$1
-                        else
-                                echo "Ok. Exiting."
-                        fi
-                fi
+                        echo "App not found."
+               fi
         }
 
         function eapp () {
@@ -80,20 +67,16 @@ PATH="$NPM_PACKAGES/bin:$PATH"
         function ltree () {
                 trees && while inotifywait -r -e create,modify,move,delete . ; do trees; done;
         }
-# WHENEVER ALIAS
-        alias wuc="whenever --update-crontab admin"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 
 if [ -n "$TMUX" ]; 
 then
-        echo "in tmux"
 else
         tx
 fi
-clear
-chruby ruby-2.1.0
+chruby 2.1.2 
 # ZSH HIGHLIGHT SETTINGS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=179'

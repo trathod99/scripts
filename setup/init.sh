@@ -19,7 +19,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/pl
 
 # INSTALL PATHOGEN FOR VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle
-curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 # INSTALL SEOUL COLOR SCHEME
 cd ~/.vim/bundle
@@ -38,9 +38,6 @@ ln ~/scripts/.dircolors ~/.dircolors
 ln ~/scripts/.zshenv ~/.zshenv
 ln ~/scripts/.pryrc ~/.pryrc
 ln ~/scripts/.npmrc ~/.npmrc
-mkdir ~/config
-ln ~/scripts/schedule.rb ~/config/schedule.rb
-wheneverize
 
 # INSTALL VIM PLUGINS
 git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo # gundo
@@ -62,10 +59,10 @@ curl -s -F "token=au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsT
 # CHANGE DEFAULT SHELL
 sudo chsh -s /bin/zsh ubuntu 
 rm ~/.zcompdump
+git remote set-url origin git@github.com:trathod99/scripts.git
 
 # GENERATE AN SSH KEY
 cd ~/.ssh 
 ssh-keygen -t rsa -C "tyler.visca.barca@gmail.com"
 cd ~/scripts
-git remote set-url origin git@github.com:trathod99/scripts.git
 
