@@ -10,7 +10,7 @@ setopt AUTO_CD
 export BUNDLER_EDITOR=vim
 NPM_PACKAGES='/home/ubuntu/.npm-packages'
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
+# PATH="$NPM_PACKAGES/bin:$PATH"
 # BASIC AUTOMATION ALIASES 
         alias szc="source ~/.zshrc"
         alias tx="cd ~ && ~/scripts/tmux.sh"
