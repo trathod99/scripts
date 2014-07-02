@@ -57,7 +57,7 @@ sudo make install
 curl -s -F "token=au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsTeK9mgcZvx" -F "message=Almost Done\!" https://api.pushover.net/1/messages.json
 
 # CHANGE DEFAULT SHELL
-sudo chsh -s /bin/zsh ubuntu 
+sudo chsh -s /bin/zsh tyler 
 rm ~/.zcompdump
 git remote set-url origin git@github.com:trathod99/scripts.git
 
