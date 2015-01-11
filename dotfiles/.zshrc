@@ -13,7 +13,7 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # BASIC AUTOMATION ALIASES 
         alias szc="source ~/.zshrc"
         alias tx="cd ~ && ~/scripts/utils/tmux.sh"
-        alias txd="tmux kill-session -t RAILS"
+        alias txd="tmux kill-session -t DEV"
         alias v="vim"
         alias trees="tree -a --noreport -C --dirsfirst -I 'vendor|test|.tmp|tmp|components|node_modules|bower_components|\.git'"
 # RAILS ALIASES
