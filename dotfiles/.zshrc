@@ -10,16 +10,15 @@ setopt AUTO_CD
 export BUNDLER_EDITOR=vim
 NPM_PACKAGES='/home/ubuntu/.npm-packages'
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-# PATH="$NPM_PACKAGES/bin:$PATH"
 # BASIC AUTOMATION ALIASES 
         alias szc="source ~/.zshrc"
-        alias tx="cd ~ && ~/scripts/tmux.sh"
+        alias tx="cd ~ && ~/scripts/utils/tmux.sh"
         alias txd="tmux kill-session -t RAILS"
         alias v="vim"
         alias trees="tree -a --noreport -C --dirsfirst -I 'vendor|test|.tmp|tmp|components|node_modules|bower_components|\.git'"
 # RAILS ALIASES
         alias Rbi="bundle install --path vendor/bundle"
-        alias Rrn="~/scripts/ruby/rails.sh"
+        alias Rrn="~/scripts/utils/rails.sh"
 # GIT ALIASES
         alias gta="git add . && git status"
 # FUNCTIONS
@@ -35,7 +34,7 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
                         CDPATH=~/DRIVE/$1
                 else
                         echo "App not found."
-               fi
+                fi
         }
 
         function eapp () {

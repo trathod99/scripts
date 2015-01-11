@@ -5,7 +5,6 @@ filetype off
 filetype plugin indent on
 syntax enable 
 set relativenumber
-set number
 set nohidden
 set autoread
 set autowrite
@@ -47,7 +46,9 @@ set undoreload=10000
 set tags=tags;~
 
 " THEMING
-color seoul256 
+set background=dark
+color flatcolor 
+let g:flatcolor_asphaltbg = 0
 set laststatus=2
 set statusline=%t%m%=%l/%L%y
 hi StatusLine ctermfg=73 ctermbg=255
@@ -73,11 +74,6 @@ nnoremap <Leader>x :bdelete<CR> " delete the current buffer
 nnoremap <Leader>q :q! " exit without saving 
 nnoremap <Leader>a :bp<CR>
 nnoremap <Leader>l :bn<CR>
-nnoremap <Leader>v o<ESC>o<ESC>o<ESC>ki
-
-" GUNDO SETTINGS
-nnoremap <Leader>u :GundoToggle<CR>
-let g:gundo_preview_height=25
 
 " BUFFERLINE SETTINGS
 let g:bufferline_echo=0
@@ -92,10 +88,3 @@ let g:rainbow_conf = {
                         \ 'parentheses': [['(',')'], ['\[','\]'], ['{','}']], 
                         \}
 
-" GITGUTTER SETTINGS
-hi GitGutterAdd ctermfg=033
-hi GitGutterChange ctermfg=064
-hi GitGutterDelete ctermfg=139
-
-" AG.vim SETTINGS
-nnoremap <Leader>A :Ag <cword><CR>
