@@ -70,11 +70,6 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/chruby/chruby.sh 
-if [ -n "$TMUX" ]; 
-then
-else
-        tx
-fi
 chruby 2.1.2 
 # ZSH HIGHLIGHT SETTINGS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)

@@ -21,9 +21,9 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/pl
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-# INSTALL SEOUL COLOR SCHEME
+# INSTALL FLATCOLOR COLOR SCHEME
 cd ~/.vim/bundle
-git clone https://github.com/junegunn/seoul256.vim.git
+git clone https://github.com/MaxSt/FlatColor.git 
 
 # CREATE NECESSARY SYMLINKS
 ln ~/scripts/dotfiles/.vimrc ~/.vimrc
@@ -33,7 +33,7 @@ ln ~/scripts/dotfiles/.gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ln ~/scripts/dotfiles/.tmux.conf ~/.tmux.conf
 ln ~/scripts/dotfiles/.gemrc ~/.gemrc
-ln ~/scripts/dotfiles.dircolors ~/.dircolors
+ln ~/scripts/dotfiles/.dircolors ~/.dircolors
 ln ~/scripts/dotfiles/.zshenv ~/.zshenv
 ln ~/scripts/.npmrc ~/.npmrc
 
