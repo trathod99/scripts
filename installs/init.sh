@@ -45,8 +45,11 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 # cd ~/.vim/bundle
 # git clone https://github.com/MaxSt/FlatColor.git 
 
+### NEW SYMLINKS
+n ~/scripts/dotfiles/.vimrc ~/.config/nvim/init.vim
+
 # CREATE NECESSARY SYMLINKS
-ln ~/scripts/dotfiles/.vimrc ~/.vimrc
+# ln ~/scripts/dotfiles/.vimrc ~/.vimrc
 ln ~/scripts/dotfiles/.zshrc ~/.zshrc
 ln ~/scripts/configs/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme
 ln ~/scripts/dotfiles/.gitignore_global ~/.gitignore_global
