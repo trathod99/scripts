@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GET UPDATES AND INSTALL REQUIRED SOFTWARE
-sudo apt-get update && sudo apt-get install build-essential // libffi-dev libgdbm-dev libncurses5-dev libyaml-dev nodejs zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql zsh ack-grep apache2 pandoc texlive exuberant-ctags tree automake silversearcher-ag inotify-tools mercurial python-software-properties
+sudo apt-get update && sudo apt-get install build-essential libffi-dev libgdbm-dev libncurses5-dev libyaml-dev zlib1g-dev libpq-dev openssl libreadline-dev libssl-dev libsqlite3-dev postgresql apache2 automake
 mkdir ~/DRIVE
 mkdir ~/.npm-packages
 mkdir /tmp/undo
@@ -20,6 +20,12 @@ sudo apt-get install neovim
 sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-get update
 sudo apt-get install fish
+
+### INSTALL RUBY-INSTALL
+wget -O ruby-install-0.5.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.5.0.tar.gz
+tar -xzvf ruby-install-0.5.0.tar.gz
+cd ruby-install-0.5.0/
+sudo make install
 
 # INSTALL OHMYZSH
 # git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -54,16 +60,15 @@ ln ~/scripts/.npmrc ~/.npmrc
 # git clone https://github.com/luochen1990/rainbow ~/.vim/bundle/rainbow # rainbow parentheses
 
 # INSTALL CHRUBY
-cd ~  
-wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz
-tar -xzvf chruby-0.3.8.tar.gz
-cd chruby-0.3.8/
-sudo make install
+# cd ~  
+# wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz
+# tar -xzvf chruby-0.3.8.tar.gz
+#cd chruby-0.3.8/
+# sudo make install
 # curl -s -F "token=au62YZTioXTEYXXhNeNtkAbZGMTa4K" -F "user=uHciazddywQjbH4JKbrsTeK9mgcZvx" -F "message=Almost Done\!" https://api.pushover.net/1/messages.json
 
 # CHANGE DEFAULT SHELL
-sudo chsh -s /bin/zsh tyler 
-rm ~/.zcompdump
+sudo chsh -s /usr/bin/fish ubuntu 
 git remote set-url origin git@github.com:trathod99/scripts.git
 
 # GENERATE AN SSH KEY
